@@ -6,7 +6,7 @@ target 'SCCalendar' do
   use_frameworks!
 
   pod 'FloatingPanel'
-  
-  # Pods for SCCalendar
+  pod 'FSCalendar'
+  pod 'SwiftHEXColors'
 
 end

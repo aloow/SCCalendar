@@ -7,22 +7,35 @@
 
 import UIKit
 import FloatingPanel
+import SwiftHEXColors
 
 class ViewController: UIViewController, FloatingPanelControllerDelegate {
 
     var fpc: FloatingPanelController!
     
+    lazy var appearance: SurfaceAppearance = {
+        let appearance = SurfaceAppearance()
+        let shadow = SurfaceAppearance.Shadow()
+        shadow.color = UIColor.black
+        shadow.offset = CGSize(width: 0, height: 16)
+        shadow.radius = 16
+        shadow.spread = 8
+        appearance.shadows = [shadow]
+        appearance.cornerRadius = 30.0
+        return appearance
+    }()
+
+    lazy var contentVC: ContentViewController = {
+        let sb = UIStoryboard(name: "Main", bundle: .main)
+        if let contentVC = sb.instantiateViewController(identifier: "ContentViewController") as? ContentViewController {
+            return contentVC
+        }
+        return UIViewController() as! ContentViewController
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupFPC()
-        
-        
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        self.present(fpc, animated: true, completion: nil)
     }
     
     func setupFPC() {
@@ -32,33 +45,13 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
         fpc.delegate = self // Optional
         fpc.layout = MyFloatingPanelLayout()
         
-        // Set a content view controller.
-        let contentVC = ContentViewController()
-        fpc.set(contentViewController: contentVC)
+        fpc.set(contentViewController: self.contentVC)
 
         // Track a scroll view(or the siblings) in the content view controller.
 //        fpc.track(scrollView: contentVC.tableView)
 
-        
-        
-        // Create a new appearance.
-        let appearance = SurfaceAppearance()
-
-        // Define shadows
-        let shadow = SurfaceAppearance.Shadow()
-        shadow.color = UIColor.black
-        shadow.offset = CGSize(width: 0, height: 16)
-        shadow.radius = 16
-        shadow.spread = 8
-        appearance.shadows = [shadow]
-
-        // Define corner radius and background color
-        appearance.cornerRadius = 18.0
-//        appearance.backgroundColor = .clear
-
-        // Set the new appearance
         fpc.surfaceView.appearance = appearance
-        
+        fpc.surfaceView.grabberHandle.barColor = UIColor(hex: 0x00615B) ?? .white
         
         // Add and show the views managed by the `FloatingPanelController` object to self.view.
         fpc.addPanel(toParent: self)
