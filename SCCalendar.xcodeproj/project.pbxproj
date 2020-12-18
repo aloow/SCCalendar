@@ -15,6 +15,7 @@
 		8850D7E5258AF00C00D87350 /* SCCalendarWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8850D7E1258AF00B00D87350 /* SCCalendarWidget.intentdefinition */; };
 		8850D7E6258AF00C00D87350 /* SCCalendarWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8850D7E1258AF00B00D87350 /* SCCalendarWidget.intentdefinition */; };
 		8850D7E9258AF00C00D87350 /* SCCalendarWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8850D7D9258AF00B00D87350 /* SCCalendarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		88DD029A258C5D5D00293945 /* 2021.json in Resources */ = {isa = PBXBuildFile; fileRef = 88DD0299258C5D5D00293945 /* 2021.json */; };
 		8EE415572588F44C00F8D0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE415562588F44C00F8D0F6 /* AppDelegate.swift */; };
 		8EE415592588F44C00F8D0F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE415582588F44C00F8D0F6 /* SceneDelegate.swift */; };
 		8EE4155B2588F44C00F8D0F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE4155A2588F44C00F8D0F6 /* ViewController.swift */; };
@@ -59,6 +60,7 @@
 		8850D7E1258AF00B00D87350 /* SCCalendarWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = SCCalendarWidget.intentdefinition; sourceTree = "<group>"; };
 		8850D7E2258AF00C00D87350 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8850D7E4258AF00C00D87350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88DD0299258C5D5D00293945 /* 2021.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 2021.json; sourceTree = "<group>"; };
 		8EE415532588F44C00F8D0F6 /* SCCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE415562588F44C00F8D0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EE415582588F44C00F8D0F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				8EE4155F2588F44E00F8D0F6 /* Assets.xcassets */,
 				8EE415612588F44E00F8D0F6 /* LaunchScreen.storyboard */,
 				8EE415642588F44E00F8D0F6 /* Info.plist */,
+				88DD0299258C5D5D00293945 /* 2021.json */,
 			);
 			path = SCCalendar;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			files = (
 				8EE415632588F44E00F8D0F6 /* LaunchScreen.storyboard in Resources */,
 				8EE415602588F44E00F8D0F6 /* Assets.xcassets in Resources */,
+				88DD029A258C5D5D00293945 /* 2021.json in Resources */,
 				8EE4155E2588F44C00F8D0F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,7 +365,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.allapp.SCCalendar.SCCalendarWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dayi35.nk.SCCalendarWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -382,7 +386,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.allapp.SCCalendar.SCCalendarWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dayi35.nk.SCCalendarWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -520,7 +524,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.allapp.SCCalendar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dayi35.nk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -541,7 +545,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.allapp.SCCalendar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dayi35.nk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -9,6 +9,8 @@ import UIKit
 import FloatingPanel
 import SwiftHEXColors
 
+
+
 class ViewController: UIViewController, FloatingPanelControllerDelegate {
 
     var fpc: FloatingPanelController!
@@ -35,8 +37,12 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupFPC()
+//        setupFPC()
+        
+        
     }
+    
+    
     
     func setupFPC() {
         // Initialize a `FloatingPanelController` object.

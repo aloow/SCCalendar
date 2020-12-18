@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Siren // 版本更新
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        updateVersion()
+        
         return true
     }
 
@@ -34,3 +38,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+extension AppDelegate {
+    
+    func updateVersion() {
+        let siren = Siren.shared
+        siren.rulesManager = RulesManager(globalRules: .critical,
+                                          showAlertAfterCurrentVersionHasBeenReleasedForDays: 0)
+        siren.apiManager = APIManager(country: .china)
+        siren.presentationManager = PresentationManager(forceLanguageLocalization: .chineseSimplified)
+        siren.wail { results in
+            switch results {
+            case .success(let updateResults):
+                print("AlertAction ", updateResults.alertAction)
+                print("Localization ", updateResults.localization)
+                print("Model ", updateResults.model)
+                print("UpdateType ", updateResults.updateType)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+}
