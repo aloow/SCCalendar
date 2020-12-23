@@ -11,5 +11,6 @@ target 'SCCalendar' do
 
   pod 'SwiftyJSON'
   pod 'Siren' # 版本更新
+  pod 'SwiftDate'
   
 end

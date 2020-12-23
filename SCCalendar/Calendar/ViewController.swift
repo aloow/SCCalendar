@@ -8,10 +8,17 @@
 import UIKit
 import FloatingPanel
 import SwiftHEXColors
+import SwiftDate
 
 class ViewController: UIViewController, FloatingPanelControllerDelegate {
 
+    //
+    
+    
+    
     var fpc: FloatingPanelController!
+    
+    var dataSource: YearInfo?
     
     lazy var appearance: SurfaceAppearance = {
         let appearance = SurfaceAppearance()
@@ -37,11 +44,9 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // 选择日历
+        // 上拉 日历
         setupFPC()
-        
-        
+        readJsonFile()
     }
     
     func setupFPC() {
@@ -66,9 +71,26 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
     
     // 选择日期
     func didSelect(date:Date) {
+        let dayInfo = dataSource?.getDayInfoWith(date: date + 1.days)
         
     }
     
+    // MARK: 读取JSON
+    func readJsonFile(fileName name:String = "2021")  {
+        
+        guard let path = Bundle.main.path(forResource: name, ofType: "json") else { return }
+        
+        let localData = NSData.init(contentsOfFile: path)! as Data
+        
+        do {
+            // banner即为我们要转化的目标model
+            let banner = try JSONDecoder().decode(YearInfo.self, from: localData)
+            self.dataSource = banner
+        } catch {
+            debugPrint("banner===ERROR")
+        }
+        
+    }
 
 }
 

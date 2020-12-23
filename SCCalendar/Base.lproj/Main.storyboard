@@ -114,16 +114,31 @@
                                         <color key="value" red="0.0" green="0.3803921569" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="18v-fS-FPg" id="TPe-7A-v5c"/>
+                                    <outlet property="delegate" destination="18v-fS-FPg" id="OYJ-GI-Hz3"/>
+                                </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjQ-Ze-obE">
+                                <rect key="frame" x="168.5" y="269" width="77.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.3803921569" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SSu-m0-M1G"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="SSu-m0-M1G" firstAttribute="trailing" secondItem="ur0-zf-H5o" secondAttribute="trailing" constant="20" id="NXp-no-TC0"/>
+                            <constraint firstItem="ur0-zf-H5o" firstAttribute="top" secondItem="NjQ-Ze-obE" secondAttribute="bottom" constant="18" id="Tl5-93-IpB"/>
                             <constraint firstItem="ur0-zf-H5o" firstAttribute="centerX" secondItem="Yev-Fc-8Kf" secondAttribute="centerX" id="WlD-zK-dLw"/>
                             <constraint firstItem="ur0-zf-H5o" firstAttribute="centerY" secondItem="Yev-Fc-8Kf" secondAttribute="centerY" id="lTH-6j-BTg"/>
+                            <constraint firstItem="NjQ-Ze-obE" firstAttribute="centerX" secondItem="Yev-Fc-8Kf" secondAttribute="centerX" id="z1O-Vr-IZm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calendarView" destination="ur0-zf-H5o" id="JtL-9T-LWH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jik-Ru-vPf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

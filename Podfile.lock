@@ -2,27 +2,35 @@ PODS:
   - FloatingPanel (2.1.0)
   - FSCalendar (2.8.2)
   - Siren (5.6.2)
+  - SwiftDate (6.3.1)
   - SwiftHEXColors (1.4.1)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - FloatingPanel
   - FSCalendar
   - Siren
+  - SwiftDate
   - SwiftHEXColors
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - FloatingPanel
     - FSCalendar
     - Siren
+    - SwiftDate
     - SwiftHEXColors
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   FloatingPanel: 1af47b69e26df98b8728307254a9a0f4eb3cd645
   FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
   Siren: 4f98be44f7d66e80513dc3e7061898cd63935bd5
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
   SwiftHEXColors: 1cb6e5d55c52749aa33db8f088ac55eb71ca4c7f
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: eed8808a235ce9ad7b84006ad90b7eefebfe675d
+PODFILE CHECKSUM: fc973744cafc86c7054ec4abdc2a00ddb4ba8df8
 
 COCOAPODS: 1.10.0.beta.2

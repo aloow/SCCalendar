@@ -24,6 +24,10 @@ class ContentViewController: UIViewController {
         // Do any additional setup after loading the view.
         setCalendar()
         
+        let date = Date()
+        let year = date.year
+        print("year: \(year)")
+        
         
     }
     
