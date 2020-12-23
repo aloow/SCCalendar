@@ -9,8 +9,6 @@ import UIKit
 import FloatingPanel
 import SwiftHEXColors
 
-
-
 class ViewController: UIViewController, FloatingPanelControllerDelegate {
 
     var fpc: FloatingPanelController!
@@ -24,12 +22,14 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
         shadow.spread = 8
         appearance.shadows = [shadow]
         appearance.cornerRadius = 30.0
+        
         return appearance
     }()
 
     lazy var contentVC: ContentViewController = {
         let sb = UIStoryboard(name: "Main", bundle: .main)
-        if let contentVC = sb.instantiateViewController(identifier: "ContentViewController") as? ContentViewController {
+        if let contentVC = sb.instantiateViewController(identifier: "ContentViewController")
+            as? ContentViewController {
             return contentVC
         }
         return UIViewController() as! ContentViewController
@@ -37,12 +37,12 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupFPC()
+        
+        // 选择日历
+        setupFPC()
         
         
     }
-    
-    
     
     func setupFPC() {
         // Initialize a `FloatingPanelController` object.
@@ -57,12 +57,17 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
 //        fpc.track(scrollView: contentVC.tableView)
 
         fpc.surfaceView.appearance = appearance
+        
         fpc.surfaceView.grabberHandle.barColor = UIColor(hex: 0x00615B) ?? .white
         
         // Add and show the views managed by the `FloatingPanelController` object to self.view.
         fpc.addPanel(toParent: self)
     }
     
+    // 选择日期
+    func didSelect(date:Date) {
+        
+    }
     
 
 }
