@@ -33,7 +33,7 @@ struct YearInfo: Codable {
 //    let October :[DayInfo]
 //
 //    let November :[DayInfo]
-    let december :[DayInfo]
+//    let december :[DayInfo]
     
     
     func getDayInfoWith(date:Date) -> DayInfo? {

@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,17 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0Ba-Vx-EgJ">
-                                <rect key="frame" x="40" y="44" width="334" height="433.5"/>
+                                <rect key="frame" x="40" y="44" width="334" height="540"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="sIa-uS-DVz">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="331.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="262"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03C-r5-lfI">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="186.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="14">
                                                         <attributes>
-                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="NSColor" red="0.0" green="0.3803921569" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <font key="NSFont" size="160" name="STSongti-SC-Regular"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
@@ -35,51 +35,82 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="1hQ-uQ-fhh">
-                                                <rect key="frame" x="0.0" y="205.5" width="334" height="126"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1hQ-uQ-fhh">
+                                                <rect key="frame" x="0.0" y="205.5" width="334" height="56.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12月14日 农历 星期一 十月三十" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcw-04-3FX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="81.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提升生财能力的方式" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ms1-lv-NeZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="31.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                                        <color key="textColor" red="0.0" green="0.3803921569" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="来自「亦仁」主题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQb-Gk-Twy">
-                                                        <rect key="frame" x="0.0" y="105.5" width="334" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                        <color key="textColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="节选自「亦仁」主题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQb-Gk-Twy">
+                                                        <rect key="frame" x="0.0" y="39.5" width="334" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                        <color key="textColor" systemColor="systemGray2Color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6g-Ny-7FJ">
-                                        <rect key="frame" x="0.0" y="361.5" width="334" height="1"/>
-                                        <color key="backgroundColor" red="0.98823529409999999" green="0.89411764709999997" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="3Gg-V2-NRm"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户的需求其实一直在搜索引擎的How to里。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alf-fY-hwO">
-                                        <rect key="frame" x="0.0" y="392.5" width="334" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3xi-kG-L3z">
+                                        <rect key="frame" x="0.0" y="292" width="334" height="2"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6g-Ny-7FJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="2"/>
+                                                <color key="backgroundColor" red="0.0" green="0.3803921569" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="3Gg-V2-NRm"/>
+                                                    <constraint firstAttribute="width" constant="30" id="lOp-5W-fIt"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="yv7-Dl-Oyg">
+                                                <rect key="frame" x="30" y="0.0" width="304" height="2"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alf-fY-hwO">
+                                        <rect key="frame" x="0.0" y="324" width="334" height="216"/>
+                                        <string key="text">1.最重要的是想清楚自己要什么，不要太在意别人的想法；
+2.多多与别人分享，让分享与回馈形成正向循环；
+3.找到机会后，尽快实现产品化、自动化、规模化、矩阵化、建立团队，利用这些杠杆提高效率；
+4.要打造自己的产品，不做没有积累的事情，长期打磨，慢慢优化，达到一定临界点后，产品会爆发出极大的能量；
+5.必须有自己的小圈子，大家可以深入交流；
+6.保持足够多的信息输入量，特别是一手信息信息越多，越有价值\n7.赚钱得趁早。</string>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="14"/>
+                                        <color key="textColor" red="0.081432797014713287" green="0.3457244336605072" blue="0.3468165397644043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.0" green="0.3803921569" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="0Ba-Vx-EgJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="2f6-N2-vgN"/>
                             <constraint firstItem="0Ba-Vx-EgJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6ks-HH-iTt"/>
                             <constraint firstItem="0Ba-Vx-EgJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UUg-oh-kt4"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0tO-Gz-O2g" appends="YES" id="b24-mA-8eZ"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="RQb-Gk-Twy" id="J1P-8a-6kj"/>
+                        <outlet property="dayLabel" destination="03C-r5-lfI" id="BG1-1z-D6Z"/>
+                        <outlet property="subTitleLabel" destination="Alf-fY-hwO" id="OTU-S0-TaA"/>
+                        <outlet property="titleLabel" destination="ms1-lv-NeZ" id="EHt-4s-gcd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0tO-Gz-O2g">
+                    <connections>
+                        <action selector="viewTap:" destination="BYZ-38-t0r" id="CdJ-lF-uTs"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-57" y="103"/>
         </scene>
@@ -93,25 +124,31 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ur0-zf-H5o" customClass="FSCalendar">
                                 <rect key="frame" x="20" y="310" width="374" height="276"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ur0-zf-H5o" secondAttribute="height" multiplier="187:138" id="qnf-iE-wmf"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
-                                        <color key="value" red="0.0" green="0.3803921569" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
-                                        <color key="value" systemColor="systemTealColor"/>
+                                        <color key="value" red="0.95957905054092407" green="0.666481614112854" blue="0.037784058600664139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
-                                        <color key="value" systemColor="systemGray4Color"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
-                                        <color key="value" red="0.0" green="0.3803921569" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.95957905054092407" green="0.666481614112854" blue="0.037784058600664139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
-                                        <color key="value" red="0.0" green="0.3803921569" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleSelectionColor">
+                                        <color key="value" red="0.0" green="0.3803921569" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleTodayColor">
+                                        <color key="value" red="0.0" green="0.3803921569" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -122,12 +159,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjQ-Ze-obE">
                                 <rect key="frame" x="168.5" y="269" width="77.5" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="0.0" green="0.3803921569" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SSu-m0-M1G"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.081432797014713287" green="0.3457244336605072" blue="0.3468165397644043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SSu-m0-M1G" firstAttribute="trailing" secondItem="ur0-zf-H5o" secondAttribute="trailing" constant="20" id="NXp-no-TC0"/>
                             <constraint firstItem="ur0-zf-H5o" firstAttribute="top" secondItem="NjQ-Ze-obE" secondAttribute="bottom" constant="18" id="Tl5-93-IpB"/>
@@ -146,14 +183,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

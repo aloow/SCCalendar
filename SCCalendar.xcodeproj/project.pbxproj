@@ -15,8 +15,8 @@
 		8850D7E5258AF00C00D87350 /* SCCalendarWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8850D7E1258AF00B00D87350 /* SCCalendarWidget.intentdefinition */; };
 		8850D7E6258AF00C00D87350 /* SCCalendarWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8850D7E1258AF00B00D87350 /* SCCalendarWidget.intentdefinition */; };
 		8850D7E9258AF00C00D87350 /* SCCalendarWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8850D7D9258AF00B00D87350 /* SCCalendarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		885A66E92593414D00EB592F /* 2021.json in Resources */ = {isa = PBXBuildFile; fileRef = 885A66E72593414D00EB592F /* 2021.json */; };
 		885A66EA2593414D00EB592F /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A66E82593414D00EB592F /* CalendarModel.swift */; };
+		8E30789025938C0900B5FBE3 /* 2021.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E30788F25938C0900B5FBE3 /* 2021.json */; };
 		8EE415572588F44C00F8D0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE415562588F44C00F8D0F6 /* AppDelegate.swift */; };
 		8EE415592588F44C00F8D0F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE415582588F44C00F8D0F6 /* SceneDelegate.swift */; };
 		8EE4155B2588F44C00F8D0F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE4155A2588F44C00F8D0F6 /* ViewController.swift */; };
@@ -61,8 +61,8 @@
 		8850D7E1258AF00B00D87350 /* SCCalendarWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = SCCalendarWidget.intentdefinition; sourceTree = "<group>"; };
 		8850D7E2258AF00C00D87350 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8850D7E4258AF00C00D87350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		885A66E72593414D00EB592F /* 2021.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 2021.json; path = "../../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/c0001bf6b9fd060f073ce2920273ae30/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/File/2021.json"; sourceTree = "<group>"; };
 		885A66E82593414D00EB592F /* CalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		8E30788F25938C0900B5FBE3 /* 2021.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 2021.json; sourceTree = "<group>"; };
 		8EE415532588F44C00F8D0F6 /* SCCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE415562588F44C00F8D0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EE415582588F44C00F8D0F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		884C67272591E9A0008585ED /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				885A66E72593414D00EB592F /* 2021.json */,
+				8E30788F25938C0900B5FBE3 /* 2021.json */,
 				885A66E82593414D00EB592F /* CalendarModel.swift */,
 				8EE4155A2588F44C00F8D0F6 /* ViewController.swift */,
 				8820333B258A088E00E601B5 /* ContentViewController.swift */,
@@ -263,7 +263,7 @@
 				8EE415632588F44E00F8D0F6 /* LaunchScreen.storyboard in Resources */,
 				8EE415602588F44E00F8D0F6 /* Assets.xcassets in Resources */,
 				8EE4155E2588F44C00F8D0F6 /* Main.storyboard in Resources */,
-				885A66E92593414D00EB592F /* 2021.json in Resources */,
+				8E30789025938C0900B5FBE3 /* 2021.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

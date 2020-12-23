@@ -13,8 +13,10 @@ import SwiftDate
 class ViewController: UIViewController, FloatingPanelControllerDelegate {
 
     //
-    
-    
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
     
     var fpc: FloatingPanelController!
     
@@ -63,7 +65,7 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
 
         fpc.surfaceView.appearance = appearance
         
-        fpc.surfaceView.grabberHandle.barColor = UIColor(hex: 0x00615B) ?? .white
+        fpc.surfaceView.grabberHandle.barColor = .white
         
         // Add and show the views managed by the `FloatingPanelController` object to self.view.
         fpc.addPanel(toParent: self)
@@ -71,8 +73,13 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
     
     // 选择日期
     func didSelect(date:Date) {
-        let dayInfo = dataSource?.getDayInfoWith(date: date + 1.days)
-        
+        guard let dayInfo = dataSource?.getDayInfoWith(date: date + 1.days) else {
+            return
+        }
+        dayLabel.text = "\(dayInfo.day)"
+        titleLabel.text = dayInfo.title
+        authorLabel.text = dayInfo.author
+        subTitleLabel.text = dayInfo.subTitle
     }
     
     // MARK: 读取JSON
@@ -92,6 +99,18 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
         
     }
 
+    // MARK: - User Touch
+    @IBAction func viewTap(_ sender: Any) {
+        
+        if fpc.state == .tip {
+            fpc.move(to: .half, animated: true)
+        } else {
+            fpc.move(to: .tip, animated: true)
+        }
+        
+    }
+    
+    
 }
 
 
