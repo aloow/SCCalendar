@@ -100,15 +100,15 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
     }
 
     // MARK: - User Touch
-    @IBAction func viewTap(_ sender: Any) {
-        
-        if fpc.state == .tip {
-            fpc.move(to: .half, animated: true)
-        } else {
-            fpc.move(to: .tip, animated: true)
-        }
-        
-    }
+//    @IBAction func viewTap(_ sender: Any) {
+//
+//        if fpc.state == .tip {
+//            fpc.move(to: .half, animated: true)
+//        } else {
+//            fpc.move(to: .tip, animated: true)
+//        }
+//
+//    }
     
     
 }

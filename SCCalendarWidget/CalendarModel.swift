@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftDate
 
 struct YearInfo: Codable {
     
@@ -37,20 +36,20 @@ struct YearInfo: Codable {
     
     // 根据日期获取对应数据
     func getDayInfoWith(date:Date) -> DayInfo? {
-        let month = date.month
+        let month = getMonthWith(date: date)
         print("month: \(month)")
         switch month {
         case 1:
-            return january[date.day]
+            return january[getDayWith(date: date)]
         case 2:
-            return february[date.day]
+            return february[getDayWith(date: date)]
         default:return nil
         }
     }
     
     // 从本地json加载数据
     // MARK: 读取JSON
-    func readJsonFile(fileName name:String = "2021") -> YearInfo? {
+    static func readJsonFile(fileName name:String = "2021") -> YearInfo? {
         
         guard let path = Bundle.main.path(forResource: name, ofType: "json") else {
             return nil
@@ -69,5 +68,20 @@ struct YearInfo: Codable {
         
     }
     
+    
+    func getYearWith(date:Date) -> Int {
+        let calendar:Calendar = Calendar.current
+        return calendar.component(.year, from: date)
+    }
+    
+    func getMonthWith(date:Date) -> Int {
+        let calendar:Calendar = Calendar.current
+        return calendar.component(.month, from: date);
+    }
+    
+    func getDayWith(date:Date) -> Int {
+        let calendar:Calendar = Calendar.current
+        return calendar.component(.day, from: date)
+    }
     
 }

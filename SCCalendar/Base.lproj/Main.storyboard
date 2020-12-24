@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -94,9 +94,6 @@
                             <constraint firstItem="0Ba-Vx-EgJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6ks-HH-iTt"/>
                             <constraint firstItem="0Ba-Vx-EgJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UUg-oh-kt4"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="0tO-Gz-O2g" appends="YES" id="b24-mA-8eZ"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="authorLabel" destination="RQb-Gk-Twy" id="J1P-8a-6kj"/>
@@ -106,11 +103,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="0tO-Gz-O2g">
-                    <connections>
-                        <action selector="viewTap:" destination="BYZ-38-t0r" id="CdJ-lF-uTs"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-57" y="103"/>
         </scene>

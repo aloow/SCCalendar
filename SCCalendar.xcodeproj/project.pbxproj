@@ -16,6 +16,8 @@
 		8850D7E6258AF00C00D87350 /* SCCalendarWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8850D7E1258AF00B00D87350 /* SCCalendarWidget.intentdefinition */; };
 		8850D7E9258AF00C00D87350 /* SCCalendarWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8850D7D9258AF00B00D87350 /* SCCalendarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		885A66EA2593414D00EB592F /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A66E82593414D00EB592F /* CalendarModel.swift */; };
+		885ADF6A2594331100C691FE /* 2021.json in Resources */ = {isa = PBXBuildFile; fileRef = 885ADF692594330E00C691FE /* 2021.json */; };
+		885ADF70259433B300C691FE /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885ADF6F259433AF00C691FE /* CalendarModel.swift */; };
 		8E30789025938C0900B5FBE3 /* 2021.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E30788F25938C0900B5FBE3 /* 2021.json */; };
 		8EE415572588F44C00F8D0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE415562588F44C00F8D0F6 /* AppDelegate.swift */; };
 		8EE415592588F44C00F8D0F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE415582588F44C00F8D0F6 /* SceneDelegate.swift */; };
@@ -24,6 +26,7 @@
 		8EE415602588F44E00F8D0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE4155F2588F44E00F8D0F6 /* Assets.xcassets */; };
 		8EE415632588F44E00F8D0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE415612588F44E00F8D0F6 /* LaunchScreen.storyboard */; };
 		A5D258A45C2D4DC46E526FEA /* Pods_SCCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001AC7C4A7FC32568F1D46F5 /* Pods_SCCalendar.framework */; };
+		CDF9F12B4922F7FBB27DBA36 /* Pods_SCCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885ADF4525942EA800C691FE /* Pods_SCCalendar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,11 @@
 		8850D7E2258AF00C00D87350 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8850D7E4258AF00C00D87350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		885A66E82593414D00EB592F /* CalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		885ADF4525942EA800C691FE /* Pods_SCCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_SCCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		885ADF5D259431A800C691FE /* SwiftDate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftDate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		885ADF692594330E00C691FE /* 2021.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 2021.json; sourceTree = "<group>"; };
+		885ADF6F259433AF00C691FE /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		885ADF73259433D400C691FE /* SwiftDate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftDate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E30788F25938C0900B5FBE3 /* 2021.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 2021.json; sourceTree = "<group>"; };
 		8EE415532588F44C00F8D0F6 /* SCCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE415562588F44C00F8D0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5D258A45C2D4DC46E526FEA /* Pods_SCCalendar.framework in Frameworks */,
+				CDF9F12B4922F7FBB27DBA36 /* Pods_SCCalendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +118,8 @@
 		8850D7DE258AF00B00D87350 /* SCCalendarWidget */ = {
 			isa = PBXGroup;
 			children = (
+				885ADF6F259433AF00C691FE /* CalendarModel.swift */,
+				885ADF692594330E00C691FE /* 2021.json */,
 				8850D7DF258AF00B00D87350 /* SCCalendarWidget.swift */,
 				8850D7E1258AF00B00D87350 /* SCCalendarWidget.intentdefinition */,
 				8850D7E2258AF00C00D87350 /* Assets.xcassets */,
@@ -163,6 +174,9 @@
 		B3A9DAA51423BDFA5BF17544 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				885ADF73259433D400C691FE /* SwiftDate.framework */,
+				885ADF5D259431A800C691FE /* SwiftDate.framework */,
+				885ADF4525942EA800C691FE /* Pods_SCCalendar.framework */,
 				001AC7C4A7FC32568F1D46F5 /* Pods_SCCalendar.framework */,
 				8850D7DA258AF00B00D87350 /* WidgetKit.framework */,
 				8850D7DC258AF00B00D87350 /* SwiftUI.framework */,
@@ -252,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				885ADF6A2594331100C691FE /* 2021.json in Resources */,
 				8850D7E3258AF00C00D87350 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8850D7E5258AF00C00D87350 /* SCCalendarWidget.intentdefinition in Sources */,
+				885ADF70259433B300C691FE /* CalendarModel.swift in Sources */,
 				8850D7E0258AF00B00D87350 /* SCCalendarWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

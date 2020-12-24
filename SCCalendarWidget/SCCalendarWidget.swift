@@ -9,17 +9,20 @@ import WidgetKit
 import SwiftUI
 import Intents
 
+// 提供数据和控制数据的刷新
 struct Provider: IntentTimelineProvider {
+    
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+        SimpleEntry(date: Date(), dateSource: YearInfo.readJsonFile()!, configuration: ConfigurationIntent())
     }
     
-    // 是在 Widget 库中展示的时候调用的
+    // 是在 Widget 库中展示的时候调用的 Widget被添加的时候执行
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+        let entry = SimpleEntry(date: Date(), dateSource: YearInfo.readJsonFile()!, configuration: configuration)
         completion(entry)
     }
 
+    // 刷新数据和控制下一步刷新时间
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
 
@@ -28,7 +31,7 @@ struct Provider: IntentTimelineProvider {
 //        for hourOffset in 0 ..< 5 {
 //            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
 //            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-        let entry = SimpleEntry(date: currentDate, configuration: configuration)
+        let entry = SimpleEntry(date: currentDate, dateSource: YearInfo.readJsonFile()!, configuration: configuration)
             entries.append(entry)
 //        }
 
@@ -37,9 +40,11 @@ struct Provider: IntentTimelineProvider {
     }
 }
 
+// Provider.Entry
 struct SimpleEntry: TimelineEntry {
     let sting: String = ""
     let date: Date
+    var dateSource: YearInfo
     let configuration: ConfigurationIntent
 }
 
@@ -50,6 +55,11 @@ struct WMMCalendarEntryView : View {
 
     @Environment(\.widgetFamily) var family
     
+    var dayInfo: YearInfo.DayInfo {
+        entry.dateSource.getDayInfoWith(date: entry.date)!
+    }
+    
+    
     var body: some View {
         
         switch family {
@@ -58,7 +68,7 @@ struct WMMCalendarEntryView : View {
         case .systemMedium:// 中
             VStack(alignment: .leading, spacing: 10.0) {
                 HStack(alignment: .top) {
-                    Text("来自「闫寒」的主题")
+                    Text("来自「\(dayInfo.author)」的主题")
                         .font(.system(size: 16, design: .default))
                         .foregroundColor(Color(hex:0xC3A777))
                     Spacer(minLength: 0)
@@ -68,7 +78,7 @@ struct WMMCalendarEntryView : View {
                 }
                 Divider()
                     .background(Color.white)
-                Text("选择产品，要么看稀缺性，要么看长期性。也就是说，要么就当时奇货可居，要么就可以长久的赚钱，如果两样都没有的话，那么这个生意是不值得做的。")
+                Text("\(dayInfo.title)")
                     .foregroundColor(Color.white)
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .leading)
@@ -107,7 +117,8 @@ struct WMMCalendar: Widget {
 
 struct WMMCalendar_Previews: PreviewProvider {
     static var previews: some View {
-        WMMCalendarEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        WMMCalendarEntryView(entry: SimpleEntry(date: Date(), dateSource: YearInfo.readJsonFile()!,
+                                                configuration: ConfigurationIntent()))
             .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
