@@ -16,9 +16,9 @@ struct YearInfo: Codable {
         let subTitle:String
         let author:String
     }
-    
-    let january :[DayInfo]
-    let february :[DayInfo]
+    let january :[String:DayInfo]
+//    let january :[DayInfo]
+//    let february :[DayInfo]
     
 //    let March :[DayInfo]
 //    let April :[DayInfo]
@@ -41,9 +41,9 @@ struct YearInfo: Codable {
         print("month: \(month)")
         switch month {
         case 1:
-            return january[date.day]
-        case 2:
-            return february[date.day]
+            return january["01"]
+//        case 2:
+//            return february[date.day]
         default:return nil
         }
     }
