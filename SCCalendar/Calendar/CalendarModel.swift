@@ -11,7 +11,7 @@ import SwiftDate
 struct YearInfo: Codable {
     
     struct DayInfo :Codable {
-        let day:Int
+        let day:String
         let title:String
         let subTitle:String
         let author:String
@@ -38,11 +38,16 @@ struct YearInfo: Codable {
     // 根据日期获取对应数据
     func getDayInfoWith(date:Date) -> DayInfo? {
         let month = date.month
-        print("month: \(month)")
+        var dayString = ""
+        if date.day < 10 {
+            dayString = String(format: "%02x", date.day)
+        } else {
+            dayString = "\(date.day)"
+        }
         switch month {
         case 1:
-            return january["01"]
-//        case 2:
+            return january[dayString]
+//        case :
 //            return february[date.day]
         default:return nil
         }

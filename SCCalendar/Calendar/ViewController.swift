@@ -16,7 +16,7 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UITextView!
     
     var fpc: FloatingPanelController!
     
@@ -46,8 +46,12 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // 上拉 日历
         setupFPC()
+        readJsonFile()
+        
         
     }
     
@@ -74,16 +78,13 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
     // 选择日期
     func didSelect(date:Date) {
         
-        readJsonFile()
-        /*
-         guard let dayInfo = dataSource?.getDayInfoWith(date: date + 1.days) else {
-             return
-         }
-         dayLabel.text = "\(dayInfo.day)"
-         titleLabel.text = dayInfo.title
-         authorLabel.text = dayInfo.author
-         subTitleLabel.text = dayInfo.subTitle
-         */
+        guard let dayInfo = dataSource?.getDayInfoWith(date: date + 1.days) else {
+            return
+        }
+        dayLabel.text = dayInfo.day
+        titleLabel.text = dayInfo.title
+        authorLabel.text = dayInfo.author
+        subTitleLabel.text = dayInfo.subTitle
         
     }
     
@@ -103,7 +104,12 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
         }
         
     }
-
+    
+    // FIXME:设置行间距
+    func setUITextView() {
+        
+    }
+    
     // MARK: - User Touch
 //    @IBAction func viewTap(_ sender: Any) {
 //

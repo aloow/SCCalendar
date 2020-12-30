@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0Ba-Vx-EgJ">
-                                <rect key="frame" x="40" y="44" width="334" height="540"/>
+                                <rect key="frame" x="40" y="44" width="334" height="584"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="sIa-uS-DVz">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="262"/>
@@ -71,18 +71,22 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alf-fY-hwO">
-                                        <rect key="frame" x="0.0" y="324" width="334" height="216"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vv7-eQ-ngx">
+                                        <rect key="frame" x="0.0" y="324" width="334" height="260"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="260" id="z9y-dx-Nzb"/>
+                                        </constraints>
                                         <string key="text">1.最重要的是想清楚自己要什么，不要太在意别人的想法；
 2.多多与别人分享，让分享与回馈形成正向循环；
 3.找到机会后，尽快实现产品化、自动化、规模化、矩阵化、建立团队，利用这些杠杆提高效率；
 4.要打造自己的产品，不做没有积累的事情，长期打磨，慢慢优化，达到一定临界点后，产品会爆发出极大的能量；
 5.必须有自己的小圈子，大家可以深入交流；
-6.保持足够多的信息输入量，特别是一手信息信息越多，越有价值\n7.赚钱得趁早。</string>
-                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="14"/>
+6.保持足够多的信息输入量，特别是一手信息信息越多，越有价值 7.赚钱得趁早。</string>
                                         <color key="textColor" red="0.081432797014713287" green="0.3457244336605072" blue="0.3468165397644043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -98,7 +102,7 @@
                     <connections>
                         <outlet property="authorLabel" destination="RQb-Gk-Twy" id="J1P-8a-6kj"/>
                         <outlet property="dayLabel" destination="03C-r5-lfI" id="BG1-1z-D6Z"/>
-                        <outlet property="subTitleLabel" destination="Alf-fY-hwO" id="OTU-S0-TaA"/>
+                        <outlet property="subTitleLabel" destination="Vv7-eQ-ngx" id="hlY-od-6ig"/>
                         <outlet property="titleLabel" destination="ms1-lv-NeZ" id="EHt-4s-gcd"/>
                     </connections>
                 </viewController>
@@ -175,6 +179,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
