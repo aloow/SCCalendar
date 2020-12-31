@@ -64,7 +64,25 @@ struct WMMCalendarEntryView : View {
         
         switch family {
         case .systemSmall:// 小
-            Text(entry.date, style: .time)
+            VStack(alignment: .leading, spacing: 10.0) {
+                HStack(alignment: .top) {
+                    Text(dayInfo.date)
+                        .font(.system(.body))
+                        .foregroundColor(Color(hex:0x4C8253))
+                    Spacer(minLength: 0)
+                    Text(dayInfo.author)
+                        .font(.system(size: 20, design: .default))
+                        .foregroundColor(.white)
+                }
+                Divider()
+                    .background(Color.white)
+                Text(dayInfo.title)
+                    .font(.system(size: 16, design: .default))
+                    .foregroundColor(Color(hex:0xC3A777))
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .leading)
+            .padding()
+            .background(LinearGradient(gradient: Gradient(colors: [Color(hex:0x00615B), Color(hex:0x00615B)]), startPoint: .top, endPoint: .bottom))
         case .systemMedium:// 中
             VStack(alignment: .leading, spacing: 10.0) {
                 HStack(alignment: .top) {
@@ -72,13 +90,13 @@ struct WMMCalendarEntryView : View {
                         .font(.system(size: 16, design: .default))
                         .foregroundColor(Color(hex:0xC3A777))
                     Spacer(minLength: 0)
-                    Text("12月07")
+                    Text(dayInfo.date)
                         .font(.system(.body))
                         .foregroundColor(Color(hex:0x4C8253))
                 }
                 Divider()
                     .background(Color.white)
-                Text("\(dayInfo.title)")
+                Text(dayInfo.title)
                     .foregroundColor(Color.white)
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .leading)
@@ -111,7 +129,7 @@ struct WMMCalendar: Widget {
         }
         .configurationDisplayName("生财日历") //是在添加widget时显示的标题
         .description("每天一起成长.") //显示的描述
-        .supportedFamilies([.systemMedium]) // 支持的尺寸
+        .supportedFamilies([.systemSmall,.systemMedium]) // 支持的尺寸
     }
 }
 
@@ -119,7 +137,10 @@ struct WMMCalendar_Previews: PreviewProvider {
     static var previews: some View {
         WMMCalendarEntryView(entry: SimpleEntry(date: Date(), dateSource: YearInfo.readJsonFile()!,
                                                 configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+//        WMMCalendarEntryView(entry: SimpleEntry(date: Date(), dateSource: YearInfo.readJsonFile()!,
+//                                                configuration: ConfigurationIntent()))
+//            .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
 

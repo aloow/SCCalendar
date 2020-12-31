@@ -20,7 +20,17 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
     
     var fpc: FloatingPanelController!
     
-    var dataSource: YearInfo?
+    var dataSource: YearInfo? {
+        didSet{
+            guard let dayInfo = dataSource?.getDayInfoWith(date: Date()) else {
+                return
+            }
+            dayLabel.text = dayInfo.day
+            titleLabel.text = dayInfo.title
+            authorLabel.text = dayInfo.author
+            subTitleLabel.text = dayInfo.subTitle
+        }
+    }
     
     lazy var appearance: SurfaceAppearance = {
         let appearance = SurfaceAppearance()
@@ -46,13 +56,9 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         // 上拉 日历
         setupFPC()
         readJsonFile()
-        
-        
     }
     
     func setupFPC() {
@@ -77,15 +83,13 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
     
     // 选择日期
     func didSelect(date:Date) {
-        
-        guard let dayInfo = dataSource?.getDayInfoWith(date: date + 1.days) else {
+        guard let dayInfo = dataSource?.getDayInfoWith(date: date) else {
             return
         }
         dayLabel.text = dayInfo.day
         titleLabel.text = dayInfo.title
         authorLabel.text = dayInfo.author
         subTitleLabel.text = dayInfo.subTitle
-        
     }
     
     // MARK: 读取JSON

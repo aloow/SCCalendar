@@ -6,11 +6,11 @@
 //
 
 import Foundation
-import SwiftDate
 
 struct YearInfo: Codable {
     
     struct DayInfo :Codable {
+        let date:String
         let day:String
         let title:String
         let subTitle:String
@@ -37,12 +37,12 @@ struct YearInfo: Codable {
     
     // 根据日期获取对应数据
     func getDayInfoWith(date:Date) -> DayInfo? {
-        let month = date.month
+        let month = getMonthWith(date: date)
         var dayString = ""
-        if date.day < 10 {
-            dayString = String(format: "%02x", date.day)
+        if getDayWith(date: date) < 10 {
+            dayString = String(format: "%02x", getDayWith(date: date))
         } else {
-            dayString = "\(date.day)"
+            dayString = "\(getDayWith(date: date))"
         }
         switch month {
         case 1:
@@ -55,7 +55,7 @@ struct YearInfo: Codable {
     
     // 从本地json加载数据
     // MARK: 读取JSON
-    func readJsonFile(fileName name:String = "2021") -> YearInfo? {
+    static func readJsonFile(fileName name:String = "2021") -> YearInfo? {
         
         guard let path = Bundle.main.path(forResource: name, ofType: "json") else {
             return nil
@@ -74,5 +74,20 @@ struct YearInfo: Codable {
         
     }
     
+    
+    func getYearWith(date:Date) -> Int {
+        let calendar:Calendar = Calendar.current
+        return calendar.component(.year, from: date)
+    }
+    
+    func getMonthWith(date:Date) -> Int {
+        let calendar:Calendar = Calendar.current
+        return calendar.component(.month, from: date);
+    }
+    
+    func getDayWith(date:Date) -> Int {
+        let calendar:Calendar = Calendar.current
+        return calendar.component(.day, from: date)
+    }
     
 }

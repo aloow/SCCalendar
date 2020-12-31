@@ -10,14 +10,15 @@ import Foundation
 struct YearInfo: Codable {
     
     struct DayInfo :Codable {
-        let day:Int
+        let date:String
+        let day:String
         let title:String
         let subTitle:String
         let author:String
     }
-    
-    let january :[DayInfo]
-    let february :[DayInfo]
+    let january :[String:DayInfo]
+//    let january :[DayInfo]
+//    let february :[DayInfo]
     
 //    let March :[DayInfo]
 //    let April :[DayInfo]
@@ -36,13 +37,21 @@ struct YearInfo: Codable {
     
     // 根据日期获取对应数据
     func getDayInfoWith(date:Date) -> DayInfo? {
+        
+        return january["03"]
+        
         let month = getMonthWith(date: date)
-        print("month: \(month)")
+        var dayString = ""
+        if getDayWith(date: date) < 10 {
+            dayString = String(format: "%02x", getDayWith(date: date))
+        } else {
+            dayString = "\(getDayWith(date: date))"
+        }
         switch month {
         case 1:
-            return january[getDayWith(date: date)]
-        case 2:
-            return february[getDayWith(date: date)]
+            return january[dayString]
+//        case :
+//            return february[date.day]
         default:return nil
         }
     }
